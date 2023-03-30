@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">QrCodeGenrator</string>
+    <string name="frontpagetitle">QR-code Genrator</string>
+</resources>

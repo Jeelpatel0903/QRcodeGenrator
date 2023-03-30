@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".genrateactivity"
+    android:background="@drawable/background"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="369dp"
+        android:layout_height="74dp"
+        android:fontFamily="cursive"
+        android:text="Genrate QR - Code"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="366dp"
+        android:layout_height="65dp"
+        android:background="@drawable/edittextview"
+        android:drawableStart="@drawable/edittextlinkcolor"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Enter Link Or text"
+        android:inputType="textPersonName"
+        android:padding="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.654"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <ImageView
+        android:id="@+id/qrgenrate"
+        android:layout_width="326dp"
+        android:layout_height="262dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55"
+        app:srcCompat="@drawable/baseline_qr_code_34" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/genratebtn"
+        android:layout_width="325dp"
+        android:layout_height="58dp"
+        android:background="@drawable/button"
+        android:drawableRight="@drawable/baseline_qr_code_34"
+        android:gravity="center"
+        android:paddingRight="55dp"
+        android:text="Genrate"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.811" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/savebtn"
+        android:layout_width="325dp"
+        android:layout_height="58dp"
+        android:background="@drawable/button"
+        android:drawableRight="@drawable/baseline_share_24"
+        android:gravity="center"
+        android:paddingRight="55dp"
+        android:text="Share Qr"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
