@@ -68,8 +68,14 @@ public class infoactivity extends AppCompatActivity {
             if (result.getContents() != null) {
                 String contents = result.getContents();
                 Log.d("QRCodeScanner", "Scanned: " + contents);
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(contents));
-                startActivity(browserIntent);
+                if (contents.startsWith("http://") || contents.startsWith("https://")) {
+                    // Open the URL in the browser
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(contents));
+                    startActivity(browserIntent);
+                } else {
+                    // Do something with the scanned result (e.g. display it in a TextView)
+                    Toast.makeText(this, "Scanned: " + contents, Toast.LENGTH_SHORT).show();
+                }
                 Toast.makeText(this, "Redirect on : "+contents, Toast.LENGTH_SHORT).show();
             } else {
                 Log.d("QRCodeScanner", "Cancelled");

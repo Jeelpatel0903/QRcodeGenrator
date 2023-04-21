@@ -60,9 +60,8 @@ public class genrateactivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String myText = editText.getText().toString().trim();
-                if(myText.equals("") && qrcodegenrate == null){
+                if(myText.equals("")){
                     Toast.makeText(genrateactivity.this, "Please Enter some URL..", Toast.LENGTH_SHORT).show();
-                    Intent intex =new Intent(genrateactivity.this,genrateactivity.class);
                 }
                 else
                 {

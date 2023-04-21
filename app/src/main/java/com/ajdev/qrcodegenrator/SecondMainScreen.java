@@ -15,7 +15,7 @@ public class SecondMainScreen extends AppCompatActivity {
         setContentView(R.layout.activity_second_main_screen);
 
         Button genratebtn = findViewById(R.id.genratebtn);
-        Button infobtn = findViewById(R.id.infobtn);
+        Button scanebtn = findViewById(R.id.scanebtn);
 
         genratebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,7 +24,7 @@ public class SecondMainScreen extends AppCompatActivity {
                 startActivity(genratebtnintent);
             }
         });
-        infobtn.setOnClickListener(new View.OnClickListener() {
+        scanebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

@@ -6,95 +6,109 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".genrateactivity"
-    android:background="@drawable/background"
-    >
+    android:background="@drawable/background">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="369dp"
-        android:layout_height="74dp"
-        android:fontFamily="cursive"
-        android:text="Genrate QR - Code"
-        android:textColor="@color/white"
-        android:textSize="50dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerlayout"
+        android:layout_width="393dp"
+        android:layout_height="128dp"
+        android:background="@drawable/header"
+        android:padding="10dp"
+        app:layout_constraintBaseline_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="0dp">
 
-    <EditText
-        android:id="@+id/edittext"
-        android:layout_width="366dp"
-        android:layout_height="65dp"
-        android:background="@drawable/edittextview"
-        android:drawableStart="@drawable/edittextlinkcolor"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Enter Link Or text"
-        android:inputType="textPersonName"
-        android:padding="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.654"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203" />
+        <LinearLayout
+            android:layout_width="344dp"
+            android:layout_height="61dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/edittextview"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-    <ImageView
-        android:id="@+id/qrgenrate"
-        android:layout_width="326dp"
-        android:layout_height="262dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+            <EditText
+                android:id="@+id/edittext"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Search your Destination..."
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/link" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="52dp"
+        app:cardBackgroundColor="#85192B1D"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55"
-        app:srcCompat="@drawable/baseline_qr_code_34" />
+        app:cardElevation="15dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/headerlayout"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/qrgenrate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_qr_code_34"/>
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/genratebtn"
-        android:layout_width="325dp"
-        android:layout_height="58dp"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="104dp"
         android:background="@drawable/button"
         android:drawableRight="@drawable/baseline_qr_code_34"
         android:gravity="center"
         android:paddingRight="55dp"
-        android:text="Genrate"
+        android:text="Tap For Genrate"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.811" />
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/savebtn"
-        android:layout_width="325dp"
-        android:layout_height="58dp"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/button"
         android:drawableRight="@drawable/baseline_share_24"
         android:gravity="center"
         android:paddingRight="55dp"
-        android:text="Share Qr"
+        android:text="Share"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925" />
-
-
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
