@@ -32,15 +32,6 @@ public class SecondMainScreen extends AppCompatActivity {
                 startActivity(infobtnintent);
             }
         });
-
-
-
-
-
-
-
-
-
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
